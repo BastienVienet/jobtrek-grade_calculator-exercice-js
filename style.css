@@ -1,0 +1,63 @@
+body {
+    background: linear-gradient(to left, #ECE9E6, #FFFFFF);
+}
+
+p {
+    margin-bottom: 0;
+}
+
+a {
+    color: black;
+}
+
+h1 {
+    margin: 0;
+    padding: 30px;
+}
+
+h2 {
+    margin: 0;
+}
+
+.row {
+    margin-bottom: 5px;
+}
+
+.form-select:focus {
+    border-color: #CED4DA;
+    box-shadow: none;
+}
+
+.btn-primary, .btn-primary:hover, .btn-primary:focus, .btn-primary:active .btn-primary:active:focus {
+    color: #061826;
+    background-color: #CCC7B9;
+    border-color: #ECE9E6;
+    margin: 5px 0;
+    box-shadow: none;
+}
+
+.container-fluid {
+    margin-top: 20px;
+
+}
+
+.card-body {
+    margin-bottom: 10px;
+}
+
+.final_note {
+    font-size: 2.5em;
+    border-radius: 20px;
+    min-width: 100px;
+    max-width: 100px;
+    min-height: 100px;
+    max-height: 100px;
+}
+
+#stonks {
+    pointer-events: none;
+}
+
+#reussite {
+    font-size: 2em;
+}

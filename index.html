@@ -1,0 +1,869 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1"
+          name="viewport">
+    <link crossorigin="anonymous"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+          rel="stylesheet">
+    <link href="style.css"
+          rel="stylesheet">
+    <title>CFC Notes - Vienet Bastien</title>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row justify-content-md-center text-center mb-5">
+        <div class="col-5"><h1>Note CFC - Vienet Bastien</h1></div>
+        <div class="col-1 border border-success d-flex align-items-center align-self-center justify-content-center final_note"
+             id="generalAvg"></div>
+        <div class="col-2 align-self-center text-center"
+             id="reussite"><h3>Réussi</h3></div>
+        <div class="col-1 d-flex align-items-baseline align-self-center justify-content-center"
+             id="stonks"></div>
+    </div>
+    <div class="row justify-content-md-center text-center">
+        <div class="col-3"><h4>Compétences de base élargies</h4></div>
+        <div class="col-3"><h4>Culture Générale</h4></div>
+        <div class="col-3"><h4>Compétences en informatique</h4></div>
+        <div class="col-3"><h4>Travail Pratique Individuel</h4></div>
+    </div>
+    <div class="row text-center">
+        <div class="col-3 align-self-center text-center"
+             id="baseKnowledgeAVG"></div>
+        <div class="col-3 align-self-center text-center"
+             id="ecgKnowledgeAvg"></div>
+        <div class="col-3 align-self-center text-center"
+             id="modulesICTAvg"></div>
+        <div class="col-1 offset-1">
+            <select aria-label="Default select example"
+                    class="form-select"
+                    id="TPI">
+                <option disabled
+                        selected>Note
+                </option>
+                <option value="6">6</option>
+                <option value="5.9">5.9</option>
+                <option value="5.8">5.8</option>
+                <option value="5.7">5.7</option>
+                <option value="5.6">5.6</option>
+                <option value="5.5">5.5</option>
+                <option value="5.4">5.4</option>
+                <option value="5.3">5.3</option>
+                <option value="5.2">5.2</option>
+                <option value="5.1">5.1</option>
+                <option value="5">5</option>
+                <option value="4.9">4.9</option>
+                <option value="4.8">4.8</option>
+                <option value="4.7">4.7</option>
+                <option value="4.6">4.6</option>
+                <option value="4.5">4.5</option>
+                <option value="4.4">4.4</option>
+                <option value="4.3">4.3</option>
+                <option value="4.2">4.2</option>
+                <option value="4.1">4.1</option>
+                <option value="4">4</option>
+                <option value="3.9">3.9</option>
+                <option value="3.8">3.8</option>
+                <option value="3.7">3.7</option>
+                <option value="3.6">3.6</option>
+                <option value="3.5">3.5</option>
+                <option value="3.4">3.4</option>
+                <option value="3.3">3.3</option>
+                <option value="3.2">3.2</option>
+                <option value="3.1">3.1</option>
+                <option value="3">3</option>
+                <option value="2.9">2.9</option>
+                <option value="2.8">2.8</option>
+                <option value="2.7">2.7</option>
+                <option value="2.6">2.6</option>
+                <option value="2.5">2.5</option>
+                <option value="2.4">2.4</option>
+                <option value="2.3">2.3</option>
+                <option value="2.2">2.2</option>
+                <option value="2.1">2.1</option>
+                <option value="2">2</option>
+                <option value="1.9">1.9</option>
+                <option value="1.8">1.8</option>
+                <option value="1.7">1.7</option>
+                <option value="1.6">1.6</option>
+                <option value="1.5">1.5</option>
+                <option value="1.4">1.4</option>
+                <option value="1.3">1.3</option>
+                <option value="1.2">1.2</option>
+                <option value="1.1">1.1</option>
+                <option value="1">1</option>
+            </select>
+        </div>
+    </div>
+    <div class="row text-center">
+        <div class="col-1 offset-md-1">
+            <select aria-label="Default select example"
+                    class="form-select"
+                    id="weight_CBE">
+                <option value="5">5%</option>
+                <option selected
+                        value="10">10%
+                </option>
+                <option value="15">15%</option>
+                <option value="20">20%</option>
+                <option value="25">25%</option>
+                <option value="30">30%</option>
+                <option value="35">35%</option>
+                <option value="40">40%</option>
+                <option value="45">45%</option>
+                <option value="50">50%</option>
+                <option value="55">55%</option>
+                <option value="60">60%</option>
+                <option value="65">65%</option>
+                <option value="70">70%</option>
+                <option value="75">75%</option>
+                <option value="80">80%</option>
+                <option value="85">85%</option>
+                <option value="90">90%</option>
+                <option value="95">95%</option>
+            </select>
+        </div>
+        <div class="col-1 offset-md-2">
+            <select aria-label="Default select example"
+                    class="form-select"
+                    id="weight_CG">
+                <option value="5">5%</option>
+                <option value="10">10%</option>
+                <option value="15">15%</option>
+                <option selected
+                        value="20">20%
+                </option>
+                <option value="25">25%</option>
+                <option value="30">30%</option>
+                <option value="35">35%</option>
+                <option value="40">40%</option>
+                <option value="45">45%</option>
+                <option value="50">50%</option>
+                <option value="55">55%</option>
+                <option value="60">60%</option>
+                <option value="65">65%</option>
+                <option value="70">70%</option>
+                <option value="75">75%</option>
+                <option value="80">80%</option>
+                <option value="85">85%</option>
+                <option value="90">90%</option>
+                <option value="95">95%</option>
+            </select>
+        </div>
+        <div class="col-1 offset-md-2">
+            <select aria-label="Default select example"
+                    class="form-select"
+                    id="weight_CI">
+                <option value="5">5%</option>
+                <option value="10">10%</option>
+                <option value="15">15%</option>
+                <option value="20">20%</option>
+                <option value="25">25%</option>
+                <option selected
+                        value="30">30%
+                </option>
+                <option value="35">35%</option>
+                <option value="40">40%</option>
+                <option value="45">45%</option>
+                <option value="50">50%</option>
+                <option value="55">55%</option>
+                <option value="60">60%</option>
+                <option value="65">65%</option>
+                <option value="70">70%</option>
+                <option value="75">75%</option>
+                <option value="80">80%</option>
+                <option value="85">85%</option>
+                <option value="90">90%</option>
+                <option value="95">95%</option>
+            </select>
+        </div>
+        <div class="col-1 offset-md-2">
+            <select aria-label="Default select example"
+                    class="form-select"
+                    id="weight_TPI">
+                <option value="5">5%</option>
+                <option value="10">10%</option>
+                <option value="15">15%</option>
+                <option value="20">20%</option>
+                <option value="25">25%</option>
+                <option value="30">30%</option>
+                <option value="35">35%</option>
+                <option selected
+                        value="40">40%
+                </option>
+                <option value="45">45%</option>
+                <option value="50">50%</option>
+                <option value="55">55%</option>
+                <option value="60">60%</option>
+                <option value="65">65%</option>
+                <option value="70">70%</option>
+                <option value="75">75%</option>
+                <option value="80">80%</option>
+                <option value="85">85%</option>
+                <option value="90">90%</option>
+                <option value="95">95%</option>
+            </select>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <p>
+        <a aria-expanded="false"
+           class="btn btn-primary"
+           data-bs-toggle="collapse"
+           href="#collapseExample1"
+           role="button">
+            Compétences de base élargies
+        </a>
+    </p>
+    <div class="collapse"
+         id="collapseExample1">
+        <div class="card card-body">
+            <div class="row">
+                <div class="col-1 offset-md-3 align-self-center text-center">Semestre 1</div>
+                <div class="col-1 align-self-center text-center">Semestre 2</div>
+                <div class="col-1 align-self-center text-center">Semestre 3</div>
+                <div class="col-1 align-self-center text-center">Semestre 4</div>
+                <div class="col-1 align-self-center text-center">Semestre 5</div>
+            </div>
+            <div class="row">
+                <div class="col-3 align-self-center">Anglais</div>
+                <div class="col-1">
+                    <select aria-label="Default select example"
+                            class="form-select"
+                            id="english_1">
+                        <option disabled
+                                selected>Note
+                        </option>
+                        <option value="6">6</option>
+                        <option value="5.5">5.5</option>
+                        <option value="5">5</option>
+                        <option value="4.5">4.5</option>
+                        <option value="4">4</option>
+                        <option value="3.5">3.5</option>
+                        <option value="3">3</option>
+                        <option value="2.5">2.5</option>
+                        <option value="2">2</option>
+                        <option value="1.5">1.5</option>
+                        <option value="1">1</option>
+                    </select>
+                </div>
+                <div class="col-1">
+                    <select aria-label="Default select example"
+                            class="form-select"
+                            id="english_2">
+                        <option disabled
+                                selected>Note
+                        </option>
+                        <option value="6">6</option>
+                        <option value="5.5">5.5</option>
+                        <option value="5">5</option>
+                        <option value="4.5">4.5</option>
+                        <option value="4">4</option>
+                        <option value="3.5">3.5</option>
+                        <option value="3">3</option>
+                        <option value="2.5">2.5</option>
+                        <option value="2">2</option>
+                        <option value="1.5">1.5</option>
+                        <option value="1">1</option>
+                    </select>
+                </div>
+                <div class="col-1">
+                    <select aria-label="Default select example"
+                            class="form-select"
+                            id="english_3">
+                        <option disabled
+                                selected>Note
+                        </option>
+                        <option value="6">6</option>
+                        <option value="5.5">5.5</option>
+                        <option value="5">5</option>
+                        <option value="4.5">4.5</option>
+                        <option value="4">4</option>
+                        <option value="3.5">3.5</option>
+                        <option value="3">3</option>
+                        <option value="2.5">2.5</option>
+                        <option value="2">2</option>
+                        <option value="1.5">1.5</option>
+                        <option value="1">1</option>
+                    </select>
+                </div>
+                <div class="col-1">
+                    <select aria-label="Default select example"
+                            class="form-select"
+                            id="english_4">
+                        <option disabled
+                                selected>Note
+                        </option>
+                        <option value="6">6</option>
+                        <option value="5.5">5.5</option>
+                        <option value="5">5</option>
+                        <option value="4.5">4.5</option>
+                        <option value="4">4</option>
+                        <option value="3.5">3.5</option>
+                        <option value="3">3</option>
+                        <option value="2.5">2.5</option>
+                        <option value="2">2</option>
+                        <option value="1.5">1.5</option>
+                        <option value="1">1</option>
+                    </select>
+                </div>
+                <div class="col-1">
+                    <select aria-label="Default select example"
+                            class="form-select"
+                            id="english_5">
+                        <option disabled
+                                selected>Note
+                        </option>
+                        <option value="6">6</option>
+                        <option value="5.5">5.5</option>
+                        <option value="5">5</option>
+                        <option value="4.5">4.5</option>
+                        <option value="4">4</option>
+                        <option value="3.5">3.5</option>
+                        <option value="3">3</option>
+                        <option value="2.5">2.5</option>
+                        <option value="2">2</option>
+                        <option value="1.5">1.5</option>
+                        <option value="1">1</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-3 align-self-center">Math</div>
+                <div class="col-1">
+                    <select aria-label="Default select example"
+                            class="form-select"
+                            id="math_1">
+                        <option disabled
+                                selected>Note
+                        </option>
+                        <option value="6">6</option>
+                        <option value="5.5">5.5</option>
+                        <option value="5">5</option>
+                        <option value="4.5">4.5</option>
+                        <option value="4">4</option>
+                        <option value="3.5">3.5</option>
+                        <option value="3">3</option>
+                        <option value="2.5">2.5</option>
+                        <option value="2">2</option>
+                        <option value="1.5">1.5</option>
+                        <option value="1">1</option>
+                    </select>
+                </div>
+                <div class="col-1">
+                    <select aria-label="Default select example"
+                            class="form-select"
+                            id="math_2">
+                        <option disabled
+                                selected>Note
+                        </option>
+                        <option value="6">6</option>
+                        <option value="5.5">5.5</option>
+                        <option value="5">5</option>
+                        <option value="4.5">4.5</option>
+                        <option value="4">4</option>
+                        <option value="3.5">3.5</option>
+                        <option value="3">3</option>
+                        <option value="2.5">2.5</option>
+                        <option value="2">2</option>
+                        <option value="1.5">1.5</option>
+                        <option value="1">1</option>
+                    </select>
+                </div>
+                <div class="col-1">
+                    <select aria-label="Default select example"
+                            class="form-select"
+                            id="math_3">
+                        <option disabled
+                                selected>Note
+                        </option>
+                        <option value="6">6</option>
+                        <option value="5.5">5.5</option>
+                        <option value="5">5</option>
+                        <option value="4.5">4.5</option>
+                        <option value="4">4</option>
+                        <option value="3.5">3.5</option>
+                        <option value="3">3</option>
+                        <option value="2.5">2.5</option>
+                        <option value="2">2</option>
+                        <option value="1.5">1.5</option>
+                        <option value="1">1</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p>
+        <a aria-expanded="false"
+           class="btn btn-primary"
+           data-bs-toggle="collapse"
+           href="#collapseExample2"
+           role="button">
+            Culture Générale
+        </a>
+    </p>
+    <div class="collapse"
+         id="collapseExample2">
+        <div class="card card-body">
+            <div class="row">
+                <div class="col-1 offset-md-3 align-self-center text-center">Semestre 1</div>
+                <div class="col-1 align-self-center text-center">Semestre 2</div>
+                <div class="col-1 align-self-center text-center">Semestre 3</div>
+                <div class="col-1 align-self-center text-center">Semestre 4</div>
+                <div class="col-1 align-self-center text-center">Semestre 5</div>
+                <div class="col-1 align-self-center text-center">Semestre 6</div>
+                <div class="col-1 align-self-center text-center">Semestre 7</div>
+                <div class="col-1 align-self-center text-center">Semestre 8</div>
+            </div>
+            <div class="row">
+                <div class="col-3 align-self-center">Société</div>
+                <div class="col-1">
+                    <select aria-label="Default select example"
+                            class="form-select"
+                            id="society_1">
+                        <option disabled
+                                selected>Note
+                        </option>
+                        <option value="6">6</option>
+                        <option value="5.5">5.5</option>
+                        <option value="5">5</option>
+                        <option value="4.5">4.5</option>
+                        <option value="4">4</option>
+                        <option value="3.5">3.5</option>
+                        <option value="3">3</option>
+                        <option value="2.5">2.5</option>
+                        <option value="2">2</option>
+                        <option value="1.5">1.5</option>
+                        <option value="1">1</option>
+                    </select>
+                </div>
+                <div class="col-1">
+                    <select aria-label="Default select example"
+                            class="form-select"
+                            id="society_2">
+                        <option disabled
+                                selected>Note
+                        </option>
+                        <option value="6">6</option>
+                        <option value="5.5">5.5</option>
+                        <option value="5">5</option>
+                        <option value="4.5">4.5</option>
+                        <option value="4">4</option>
+                        <option value="3.5">3.5</option>
+                        <option value="3">3</option>
+                        <option value="2.5">2.5</option>
+                        <option value="2">2</option>
+                        <option value="1.5">1.5</option>
+                        <option value="1">1</option>
+                    </select>
+                </div>
+                <div class="col-1">
+                    <select aria-label="Default select example"
+                            class="form-select"
+                            id="society_3">
+                        <option disabled
+                                selected>Note
+                        </option>
+                        <option value="6">6</option>
+                        <option value="5.5">5.5</option>
+                        <option value="5">5</option>
+                        <option value="4.5">4.5</option>
+                        <option value="4">4</option>
+                        <option value="3.5">3.5</option>
+                        <option value="3">3</option>
+                        <option value="2.5">2.5</option>
+                        <option value="2">2</option>
+                        <option value="1.5">1.5</option>
+                        <option value="1">1</option>
+                    </select>
+                </div>
+                <div class="col-1">
+                    <select aria-label="Default select example"
+                            class="form-select"
+                            id="society_4">
+                        <option disabled
+                                selected>Note
+                        </option>
+                        <option value="6">6</option>
+                        <option value="5.5">5.5</option>
+                        <option value="5">5</option>
+                        <option value="4.5">4.5</option>
+                        <option value="4">4</option>
+                        <option value="3.5">3.5</option>
+                        <option value="3">3</option>
+                        <option value="2.5">2.5</option>
+                        <option value="2">2</option>
+                        <option value="1.5">1.5</option>
+                        <option value="1">1</option>
+                    </select>
+                </div>
+                <div class="col-1">
+                    <select aria-label="Default select example"
+                            class="form-select"
+                            id="society_5">
+                        <option disabled
+                                selected>Note
+                        </option>
+                        <option value="6">6</option>
+                        <option value="5.5">5.5</option>
+                        <option value="5">5</option>
+                        <option value="4.5">4.5</option>
+                        <option value="4">4</option>
+                        <option value="3.5">3.5</option>
+                        <option value="3">3</option>
+                        <option value="2.5">2.5</option>
+                        <option value="2">2</option>
+                        <option value="1.5">1.5</option>
+                        <option value="1">1</option>
+                    </select>
+                </div>
+                <div class="col-1">
+                    <select aria-label="Default select example"
+                            class="form-select"
+                            id="society_6">
+                        <option disabled
+                                selected>Note
+                        </option>
+                        <option value="6">6</option>
+                        <option value="5.5">5.5</option>
+                        <option value="5">5</option>
+                        <option value="4.5">4.5</option>
+                        <option value="4">4</option>
+                        <option value="3.5">3.5</option>
+                        <option value="3">3</option>
+                        <option value="2.5">2.5</option>
+                        <option value="2">2</option>
+                        <option value="1.5">1.5</option>
+                        <option value="1">1</option>
+                    </select>
+                </div>
+                <div class="col-1">
+                    <select aria-label="Default select example"
+                            class="form-select"
+                            id="society_7">
+                        <option disabled
+                                selected>Note
+                        </option>
+                        <option value="6">6</option>
+                        <option value="5.5">5.5</option>
+                        <option value="5">5</option>
+                        <option value="4.5">4.5</option>
+                        <option value="4">4</option>
+                        <option value="3.5">3.5</option>
+                        <option value="3">3</option>
+                        <option value="2.5">2.5</option>
+                        <option value="2">2</option>
+                        <option value="1.5">1.5</option>
+                        <option value="1">1</option>
+                    </select>
+                </div>
+                <div class="col-1">
+                    <select aria-label="Default select example"
+                            class="form-select"
+                            id="society_8">
+                        <option disabled
+                                selected>Note
+                        </option>
+                        <option value="6">6</option>
+                        <option value="5.5">5.5</option>
+                        <option value="5">5</option>
+                        <option value="4.5">4.5</option>
+                        <option value="4">4</option>
+                        <option value="3.5">3.5</option>
+                        <option value="3">3</option>
+                        <option value="2.5">2.5</option>
+                        <option value="2">2</option>
+                        <option value="1.5">1.5</option>
+                        <option value="1">1</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-3 align-self-center">Langue et Communication</div>
+                <div class="col-1">
+                    <select aria-label="Default select example"
+                            class="form-select"
+                            id="LC_1">
+                        <option disabled
+                                selected>Note
+                        </option>
+                        <option value="6">6</option>
+                        <option value="5.5">5.5</option>
+                        <option value="5">5</option>
+                        <option value="4.5">4.5</option>
+                        <option value="4">4</option>
+                        <option value="3.5">3.5</option>
+                        <option value="3">3</option>
+                        <option value="2.5">2.5</option>
+                        <option value="2">2</option>
+                        <option value="1.5">1.5</option>
+                        <option value="1">1</option>
+                    </select>
+                </div>
+                <div class="col-1">
+                    <select aria-label="Default select example"
+                            class="form-select"
+                            id="LC_2">
+                        <option disabled
+                                selected>Note
+                        </option>
+                        <option value="6">6</option>
+                        <option value="5.5">5.5</option>
+                        <option value="5">5</option>
+                        <option value="4.5">4.5</option>
+                        <option value="4">4</option>
+                        <option value="3.5">3.5</option>
+                        <option value="3">3</option>
+                        <option value="2.5">2.5</option>
+                        <option value="2">2</option>
+                        <option value="1.5">1.5</option>
+                        <option value="1">1</option>
+                    </select>
+                </div>
+                <div class="col-1">
+                    <select aria-label="Default select example"
+                            class="form-select"
+                            id="LC_3">
+                        <option disabled
+                                selected>Note
+                        </option>
+                        <option value="6">6</option>
+                        <option value="5.5">5.5</option>
+                        <option value="5">5</option>
+                        <option value="4.5">4.5</option>
+                        <option value="4">4</option>
+                        <option value="3.5">3.5</option>
+                        <option value="3">3</option>
+                        <option value="2.5">2.5</option>
+                        <option value="2">2</option>
+                        <option value="1.5">1.5</option>
+                        <option value="1">1</option>
+                    </select>
+                </div>
+                <div class="col-1">
+                    <select aria-label="Default select example"
+                            class="form-select"
+                            id="LC_4">
+                        <option disabled
+                                selected>Note
+                        </option>
+                        <option value="6">6</option>
+                        <option value="5.5">5.5</option>
+                        <option value="5">5</option>
+                        <option value="4.5">4.5</option>
+                        <option value="4">4</option>
+                        <option value="3.5">3.5</option>
+                        <option value="3">3</option>
+                        <option value="2.5">2.5</option>
+                        <option value="2">2</option>
+                        <option value="1.5">1.5</option>
+                        <option value="1">1</option>
+                    </select>
+                </div>
+                <div class="col-1">
+                    <select aria-label="Default select example"
+                            class="form-select"
+                            id="LC_5">
+                        <option disabled
+                                selected>Note
+                        </option>
+                        <option value="6">6</option>
+                        <option value="5.5">5.5</option>
+                        <option value="5">5</option>
+                        <option value="4.5">4.5</option>
+                        <option value="4">4</option>
+                        <option value="3.5">3.5</option>
+                        <option value="3">3</option>
+                        <option value="2.5">2.5</option>
+                        <option value="2">2</option>
+                        <option value="1.5">1.5</option>
+                        <option value="1">1</option>
+                    </select>
+                </div>
+                <div class="col-1">
+                    <select aria-label="Default select example"
+                            class="form-select"
+                            id="LC_6">
+                        <option disabled
+                                selected>Note
+                        </option>
+                        <option value="6">6</option>
+                        <option value="5.5">5.5</option>
+                        <option value="5">5</option>
+                        <option value="4.5">4.5</option>
+                        <option value="4">4</option>
+                        <option value="3.5">3.5</option>
+                        <option value="3">3</option>
+                        <option value="2.5">2.5</option>
+                        <option value="2">2</option>
+                        <option value="1.5">1.5</option>
+                        <option value="1">1</option>
+                    </select>
+                </div>
+                <div class="col-1">
+                    <select aria-label="Default select example"
+                            class="form-select"
+                            id="LC_7">
+                        <option disabled
+                                selected>Note
+                        </option>
+                        <option value="6">6</option>
+                        <option value="5.5">5.5</option>
+                        <option value="5">5</option>
+                        <option value="4.5">4.5</option>
+                        <option value="4">4</option>
+                        <option value="3.5">3.5</option>
+                        <option value="3">3</option>
+                        <option value="2.5">2.5</option>
+                        <option value="2">2</option>
+                        <option value="1.5">1.5</option>
+                        <option value="1">1</option>
+                    </select>
+                </div>
+                <div class="col-1">
+                    <select aria-label="Default select example"
+                            class="form-select"
+                            id="LC_8">
+                        <option disabled
+                                selected>Note
+                        </option>
+                        <option value="6">6</option>
+                        <option value="5.5">5.5</option>
+                        <option value="5">5</option>
+                        <option value="4.5">4.5</option>
+                        <option value="4">4</option>
+                        <option value="3.5">3.5</option>
+                        <option value="3">3</option>
+                        <option value="2.5">2.5</option>
+                        <option value="2">2</option>
+                        <option value="1.5">1.5</option>
+                        <option value="1">1</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p>
+        <a aria-expanded="false"
+           class="btn btn-primary"
+           data-bs-toggle="collapse"
+           href="#collapseExample3"
+           role="button">
+            Compétences en informatique
+        </a>
+    </p>
+    <div class="collapse"
+         id="collapseExample3">
+        <div class="card card-body">
+            <div class="row">
+                <div class="col-3 align-self-center">Module EPSIC</div>
+                <div class="col-1">
+                    <select aria-label="Default select example"
+                            class="form-select"
+                            id="EPSIC">
+                        <option disabled
+                                selected>Note
+                        </option>
+                        <option value="6">6</option>
+                        <option value="5.5">5.5</option>
+                        <option value="5">5</option>
+                        <option value="4.5">4.5</option>
+                        <option value="4">4</option>
+                        <option value="3.5">3.5</option>
+                        <option value="3">3</option>
+                        <option value="2.5">2.5</option>
+                        <option value="2">2</option>
+                        <option value="1.5">1.5</option>
+                        <option value="1">1</option>
+                    </select>
+                </div>
+                <div class="col-1 align-self-center">
+                    <select aria-label="Default select example"
+                            class="form-select"
+                            id="weight_EPSIC">
+                        <option value="5">5%</option>
+                        <option value="10">10%</option>
+                        <option value="15">15%</option>
+                        <option value="20">20%</option>
+                        <option value="25">25%</option>
+                        <option value="30">30%</option>
+                        <option value="35">35%</option>
+                        <option value="40">40%</option>
+                        <option value="45">45%</option>
+                        <option value="50">50%</option>
+                        <option value="55">55%</option>
+                        <option value="60">60%</option>
+                        <option value="65">65%</option>
+                        <option value="70">70%</option>
+                        <option value="75">75%</option>
+                        <option selected
+                                value="80">80%
+                        </option>
+                        <option value="85">85%</option>
+                        <option value="90">90%</option>
+                        <option value="95">95%</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-3 align-self-center">CIE</div>
+                <div class="col-1">
+                    <select aria-label="Default select example"
+                            class="form-select"
+                            id="CIE">
+                        <option disabled
+                                selected>Note
+                        </option>
+                        <option value="6">6</option>
+                        <option value="5.5">5.5</option>
+                        <option value="5">5</option>
+                        <option value="4.5">4.5</option>
+                        <option value="4">4</option>
+                        <option value="3.5">3.5</option>
+                        <option value="3">3</option>
+                        <option value="2.5">2.5</option>
+                        <option value="2">2</option>
+                        <option value="1.5">1.5</option>
+                        <option value="1">1</option>
+                    </select>
+                </div>
+                <div class="col-1 align-self-center">
+                    <select aria-label="Default select example"
+                            class="form-select"
+                            id="weight_CIE">
+                        <option value="5">5%</option>
+                        <option value="10">10%</option>
+                        <option value="15">15%</option>
+                        <option selected
+                                value="20">20%
+                        </option>
+                        <option value="25">25%</option>
+                        <option value="30">30%</option>
+                        <option value="35">35%</option>
+                        <option value="40">40%</option>
+                        <option value="45">45%</option>
+                        <option value="50">50%</option>
+                        <option value="55">55%</option>
+                        <option value="60">60%</option>
+                        <option value="65">65%</option>
+                        <option value="70">70%</option>
+                        <option value="75">75%</option>
+                        <option value="80">80%</option>
+                        <option value="85">85%</option>
+                        <option value="90">90%</option>
+                        <option value="95">95%</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script crossorigin="anonymous"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="grades.js"></script>
+</body>
+</html>
