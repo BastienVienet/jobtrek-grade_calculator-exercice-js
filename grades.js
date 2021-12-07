@@ -14,7 +14,6 @@ window.addEventListener('load', () => { //Code à exécuter lorsque l'événemen
         grades = JSON.parse(localStorage.getItem("stringifyGrades"))
         updateGradesWhenTheyAreAlreadyInLocalStorage()
     }
-
     arrayConstitutionAndAveragePlusWeight()
     registerChangeEventListenerOnInputs()
 });
@@ -161,11 +160,12 @@ function arrayConstitutionAndAveragePlusWeight() {
     function passOrFailure() {
         let result;
         if (generalAvg === null || generalAvg === undefined || isNaN(generalAvg)) {
+            document.getElementById("stonks").innerHTML = `<iframe src="https://giphy.com/embed/l4Ep1nsFTZsKKGki4" width="180" height="90"></iframe><p><a href="https://giphy.com/gifs/heyarnold-nickelodeon-hey-arnold-l4Ep1nsFTZsKKGki4"></a></p>`
             return "-"
         } else if (generalAvg >= 4.5) {
             result = "Réussi !"
             document.getElementById("stonks").innerHTML = `<iframe src="https://giphy.com/embed/KEeyysnlLdJ4afgEhk" width="180" height="90"></iframe><p><a href="https://giphy.com/gifs/meme-stonks-KEeyysnlLdJ4afgEhk"></a></p>`
-        } else if (generalAvg < 4.5 && generalAvg >= 4){
+        } else if (generalAvg < 4.5 && generalAvg >= 4) {
             result = "Encore un effort!"
             document.getElementById("stonks").innerHTML = `<iframe src="https://giphy.com/embed/QMHoU66sBXqqLqYvGO" width="180" height="90"></iframe><p><a href="https://giphy.com/gifs/this-is-fine-QMHoU66sBXqqLqYvGO"></a></p>`
         } else {
