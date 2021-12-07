@@ -188,17 +188,18 @@ function arrayConstitutionAndAveragePlusWeight() {
 // Écrire dans l'HTML les moyennes obtenues
 function writeAverageToHTML(baseKnowledgeAVG, ecgKnowledgeAvg, modulesICTAvg, generalAvg, passOrFailure) {
 
-    document.getElementById("baseKnowledgeAVG").innerHTML = "<p>" + returnOnlyIfIsNumber(baseKnowledgeAVG) + "</p>"
-    document.getElementById("ecgKnowledgeAvg").innerHTML = "<p>" + returnOnlyIfIsNumber(ecgKnowledgeAvg) + "</p>"
-    document.getElementById("modulesICTAvg").innerHTML = "<p>" + returnOnlyIfIsNumber(modulesICTAvg) + "</p>"
-    document.getElementById("generalAvg").innerHTML = "<p>" + returnOnlyIfIsNumber(generalAvg) + "</p>"
+    document.getElementById("baseKnowledgeAVG").innerHTML = "<p>" + returnOnlyIfItIsANumber(baseKnowledgeAVG) + "</p>"
+    document.getElementById("ecgKnowledgeAvg").innerHTML = "<p>" + returnOnlyIfItIsANumber(ecgKnowledgeAvg) + "</p>"
+    document.getElementById("modulesICTAvg").innerHTML = "<p>" + returnOnlyIfItIsANumber(modulesICTAvg) + "</p>"
+    document.getElementById("generalAvg").innerHTML = "<p>" + returnOnlyIfItIsANumber(generalAvg) + "</p>"
     document.getElementById("reussite").innerHTML = "<p>" + passOrFailure + "</p>"
 }
 
 //Retourner le string "-" si le nombre dans le paramètre n'est pas un vrai nombre (undefined, Null, NaN)
-function returnOnlyIfIsNumber(number) {
+function returnOnlyIfItIsANumber(number) {
     if (number === null || number === undefined || isNaN(number)) {
         return "-"
-    } else
+    } else {
         return number
+    }
 }
